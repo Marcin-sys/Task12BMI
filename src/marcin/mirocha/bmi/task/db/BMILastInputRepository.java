@@ -8,19 +8,20 @@ public class BMILastInputRepository {
         return this.lastBMITable;
     }
 
-    public void saveLastBMIOutput(String BMIInput){
+    public void saveLastBMIOutput(String BMIInput) {
         int id = 0;
-        for (int i=0; i <10; i++){
+        for (int i = 0; i < 10; i++) {
             if (this.lastBMITable[i] == null) {
-                id =  i;
+                id = i;
                 this.lastBMITable[i] = BMIInput;
                 System.out.println("Your id is: " + id);
                 break;
             }
         }
     }
-    public void printAll(){
-        for (String element : this.lastBMITable){
+
+    public void printAll() {
+        for (String element : this.lastBMITable) {
             System.out.println(element);
         }
     }
